@@ -34,6 +34,38 @@ public class TigaLoop {
         } while (k <= n);
         System.out.println();
 
+        System.out.println();
+
+        // Pembuktian off-by-one
+        int kurang = 0;
+        for (int i = 1; i < n; i++) {
+            kurang++;
+        }
+
+        int kurangSama = 0;
+        for (int i = 1; i <= n; i++) {
+            kurangSama++;
+        }
+
+        System.out.println("i < n berputar : " + kurang + " kali");
+        System.out.println("i <= n berputar : " + kurangSama + " kali");
+
+        // Menyaring deret 1-10 dengan continue dan break
+        System.out.print("Disaring : ");
+        int countPrintln = 0;
+        for (int i = 1; i <= 10; i++) {
+            if (i % 2 == 0) {
+                continue;
+            }
+            if (i > 7) {
+                break;
+            }
+            System.out.print(i + " ");
+            countPrintln++;
+        }
+        System.out.println();
+        System.out.println("Sampai println : " + countPrintln + " kali");
+
         input.close();
     }
 }
